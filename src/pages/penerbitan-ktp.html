@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Penerbitan Kartu Tanda Penduduk</title>
+    <link href="/dist/output.css" rel="stylesheet" />
+    <!-- icon -->
+    <link rel="icon" href="../img/ico.png" />
+    <!-- carousel -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <body class="font-poppins">
+    <header
+      data-aos="fade-down"
+      data-aos-duration="2000"
+      class="flex items-center justify-center w-full font-semibold bg-white/90 fixed top-0 z-[9999] text-slate-800 shadow-lg border-b-2 border-slate-500"
+    >
+      <div class="container pt-6 pb-7">
+        <div
+          class="flex flex-row justify-between lg:justify-between lg:items-center"
+        >
+          <!-- logo -->
+          <div class="flex items-center pl-4">
+            <a
+              href="/index.html"
+              class="hover:text-slate-400 flex flex-row gap-x-2"
+              ><img
+                width="34px"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Seal_of_the_City_of_Serang.svg/1024px-Seal_of_the_City_of_Serang.svg.png"
+                alt=""
+              />
+              <h1 class="text-center mt-2">Kelurahan Curugmanis</h1></a
+            >
+          </div>
+          <!-- menu moble -->
+          <div class="mt-2 pr-3 lg:hidden">
+            <button
+              id="dropdownInformationButton"
+              data-dropdown-toggle="dropdownInformation"
+              class="text-slate-800 bg-slate-800 focus:ring-4 focus:outline-none focus:ring-blue-100 font-semibold rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center"
+              type="button"
+            >
+              Menu
+              <svg
+                class="w-2.5 h-2.5 ml-2.5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 10 6"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 1 4 4 4-4"
+                />
+              </svg>
+            </button>
+
+            <!-- Dropdown menu -->
+            <div
+              id="dropdownInformation"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+            >
+              <ul
+                class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                aria-labelledby="dropdownInformationButton"
+              >
+                <li>
+                  <a
+                    href="/index.html#beranda"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >Beranda</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/index.html#sejarah"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >Sejarah</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/index.html#visimisi"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >Visi & Misi</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/index.html#berita"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >Berita</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/index.html#profile"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >Struktur Organisasi</a
+                  >
+                </li>
+                <li>
+                  <div
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  >
+                    <div class="text-blue-800">
+                      <button
+                        id="dropdownDefaultButton"
+                        data-dropdown-toggle="dropdown"
+                        type="button"
+                      >
+                        Layanan
+                      </button>
+                      <!-- Dropdown menu -->
+                      <div
+                        id="dropdown"
+                        class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+                      >
+                        <ul
+                          class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                          aria-labelledby="dropdownDefaultButton"
+                        >
+                          <li>
+                            <a
+                              href="./pendaftaran-kelahiran.html"
+                              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                              >Pendaftaran Kelahiran</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="./pendaftaran-kematian.html"
+                              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                              >Pendaftaran Kematian</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="./pendaftaran-penuduk.html"
+                              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                              >Pendaftaran Penduduk</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="./penerbitan-kk.html"
+                              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                              >Penerbitan Kartu Keluarga (KK)</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="./penerbitan-ktp.html"
+                              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                            >
+                              Penerbitan Kartu Tanda Penduduk (KTP)</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="./sk-domisili.html"
+                              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                            >
+                              Penerbitan Surat Keterangan Domisili</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="./pendaftaran-kematian.html"
+                              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                            >
+                              Penerbitan Surat Keterangan Kematian
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- navmenu -->
+          <div class="hidden lg:flex flex-row gap-x-5">
+            <a href="/index.html#beranda" class="hover:text-slate-400"
+              >Beranda</a
+            >
+            <a href="/index.html#sejarah" class="hover:text-slate-400"
+              >Sejarah</a
+            >
+            <a href="/index.html#visimisi" class="hover:text-slate-400"
+              >Visi & Misi</a
+            >
+            <a href="/index.html#berita" class="hover:text-slate-400">Berita</a>
+            <a href="/index.html#profile" class="hover:text-slate-400"
+              >Struktur Organisasi</a
+            >
+            <!-- dropdown -->
+            <div class="text-blue-800">
+              <button
+                id="dropdownHoverButton"
+                data-dropdown-toggle="dropdownHover"
+                data-dropdown-trigger="hover"
+                class="text-black"
+              >
+                Layanan
+              </button>
+              <!-- Dropdown menu -->
+              <div
+                id="dropdownHover"
+                class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+              >
+                <ul
+                  class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                  aria-labelledby="dropdownHoverButton"
+                >
+                  <li>
+                    <a
+                      href="./pendaftaran-kelahiran.html"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >Pendaftaran Kelahiran</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./pendaftaran-kematian.html"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >Pendaftaran Kematian</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./pendaftaran-penuduk.html"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >Pendaftaran Penduduk</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./penerbitan-kk.html"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >Penerbitan Kartu Keluarga (KK)</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./penerbitan-ktp.html"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >
+                      Penerbitan Kartu Tanda Penduduk (KTP)</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./sk-domisili.html"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >
+                      Penerbitan Surat Keterangan Domisili</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./sk-kematian.html"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >
+                      Penerbitan Surat Keterangan Kematian
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div
+      class="flex items-center justify-center"
+      data-aos="fade-right"
+      data-aos-duration="2000"
+    >
+      <div class="container mt-32">
+        <h1 class="text-3xl font-semibold pl-2">
+          Penerbitan Kartu Tanda Penduduk
+        </h1>
+        <p class="pl-2">
+          Berikut ini adalah persyaratan untuk melakukan Penerbitan Kartu Tanda
+          Penduduk (KTP) :
+        </p>
+        <p class="ml-3">
+          1. Surat pengantar dari RT/RW setempat.
+          <img src="/src/img/layanan/skrw.webp" alt="" width="600px" />
+        </p>
+        <p class="ml-3">
+          2. Fotokopi Kartu Keluarga (KK).
+          <img src="/src/img/layanan/kk.webp" alt="" />
+        </p>
+        <p class="ml-3">
+          3. Pas foto terbaru.
+          <img src="/src/img/layanan/pasfoto.jpeg" alt="" />
+        </p>
+        <p class="ml-3">
+          4. Surat keterangan kehilangan (jika KTP lama hilang).
+          <img src="/src/img/layanan/skhilang.webp" alt="" width="600px" />
+        </p>
+      </div>
+    </div>
+    <!-- footer -->
+    <footer
+      class="bottom-0 pb-3 bg-slate-800 pt-4 mt-3 w-full items-center justify-center"
+    >
+      <!-- copyright -->
+      <div class="flex items-center justify-center text-center">
+        <p class="text-xs text-white text-center">
+          Selamat Datang Di WEB Kelurahan Curugmanis (KKM 04 UNIVERSITAS BINA
+          BANGSA)
+        </p>
+      </div>
+    </footer>
+    <!-- flowbite carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
+    <!-- script animation -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
